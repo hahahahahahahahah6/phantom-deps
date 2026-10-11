@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "phantom-deps"
+version = "0.1.0"
+description = "Hallucinated-dependency scanner: verify every package in your manifests and imports actually exists on PyPI/npm before you install"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "hao li" }]
+keywords = ["security", "supply-chain", "pypi", "npm", "llm", "hallucination", "slopsquatting", "dependency-scanner"]
+
+[project.scripts]
+phantom-deps = "phantom_deps.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/hahahahahahahahah6/phantom-deps"
+
+[tool.setuptools.packages.find]
+where = ["src"]
